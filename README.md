@@ -1,18 +1,20 @@
 # 📊 Data and AI Engineering Internship Project – Apexon (March 2025 – July 2025)
 
-This repository contains the end-to-end data engineering project completed during my internship at **Apexon** as a **Data and AI Engineering Intern**. The project involved processing and analyzing large-scale healthcare data using modern data engineering tools and architectures.
+This repository contains the end-to-end data and AI engineering project completed during my internship at **Apexon** as a **Data and AI Engineering Intern**. The project involved processing, transforming, and analyzing large-scale healthcare data, building scalable data pipelines, and developing an ML inference workflow.
 
 ---
 
 ## 🚀 Project Overview
 
-The main objective of this project was to build a scalable, cloud-based data pipeline that supports exploratory data analysis, reporting, and analytics on raw healthcare data.
+The main objective of this project was to build a scalable, cloud-based data pipeline that supports exploratory data analysis, reporting, machine learning model inference, and analytics on raw healthcare data.
 
 ### ✨ Key Goals:
 - Clean and transform raw datasets from cloud sources
 - Perform exploratory data analysis (EDA) to extract insights
 - Build ETL pipelines using Delta Lake and Medallion Architecture
 - Develop SQL and PySpark queries for business-driven analysis
+- Balance imbalanced datasets using statistical and transformation techniques
+- Implement an ML inference pipeline for predictive analytics
 - Visualize patterns and trends in the data for decision-making
 
 ---
@@ -24,10 +26,10 @@ The main objective of this project was to build a scalable, cloud-based data pip
 - **Big Data Processing**: Databricks  
 - **Data Storage**: Delta Lake  
 - **Data Architecture**: Medallion Architecture (Bronze → Silver → Gold)  
-- **EDA & Visualization**: Pandas, Matplotlib, Seaborn, SQL
+- **EDA & Visualization**: Pandas, Matplotlib, Seaborn, SQL  
+- **Machine Learning**: Scikit-learn (model inference & evaluation), Imbalanced-learn (SMOTE, oversampling, undersampling)
 
 ---
-
 
 ## ✅ Key Contributions
 
@@ -36,6 +38,8 @@ The main objective of this project was to build a scalable, cloud-based data pip
 - Built interactive visualizations to support business decisions
 - Implemented Medallion Architecture using Delta Lake (Bronze → Silver → Gold)
 - Developed scalable PySpark and SQL queries for data transformations
+- Applied dataset balancing techniques (SMOTE, undersampling, oversampling) to handle class imbalance
+- Created an **ML inference pipeline** for deploying and testing trained models on new incoming data
 
 ---
 
@@ -53,7 +57,9 @@ Special thanks to:
 This project helped solidify my understanding of:
 - Data pipeline development
 - Cloud-based data processing
-- Real-world data engineering workflows
+- Machine learning inference workflows
+- Dataset balancing techniques for improved model performance
+- Real-world data engineering practices
 
 Looking forward to applying this knowledge in future opportunities!
 
@@ -63,8 +69,6 @@ Looking forward to applying this knowledge in future opportunities!
 
 If you'd like to connect or know more about my journey, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/naga-sravani-suda-29b4402a1).
 
-
 ---
 
 > “Transforming raw data into actionable insights is not just a skill — it's an opportunity to empower decisions.”
-
