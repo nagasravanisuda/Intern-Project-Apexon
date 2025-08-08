@@ -1,4 +1,4 @@
-# 📊 Data Engineering Internship Project – Apexon (March 2025 – July 2025)
+# 📊 Data and AI Engineering Internship Project – Apexon (March 2025 – July 2025)
 
 This repository contains the end-to-end data engineering project completed during my internship at **Apexon** as a **Data and AI Engineering Intern**. The project involved processing and analyzing large-scale healthcare data using modern data engineering tools and architectures.
 
