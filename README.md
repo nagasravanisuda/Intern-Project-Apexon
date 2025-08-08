@@ -61,7 +61,8 @@ Looking forward to applying this knowledge in future opportunities!
 
 ## 📬 Contact
 
-If you'd like to connect or know more about my journey, feel free to reach out via [LinkedIn]([LinkedIn])(https://www.linkedin.com/in/naga-sravani-suda-29b4402a1)
+If you'd like to connect or know more about my journey, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/naga-sravani-suda-29b4402a1).
+
 
 ---
 
