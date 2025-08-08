@@ -1,74 +1,110 @@
-# 📊 Data and AI Engineering Internship Project – Apexon (March 2025 – July 2025)
+# Mortality Prediction using MIMIC-III Dataset with MLOps
 
-This repository contains the end-to-end data and AI engineering project completed during my internship at **Apexon** as a **Data and AI Engineering Intern**. The project involved processing, transforming, and analyzing large-scale healthcare data, building scalable data pipelines, and developing an ML inference workflow.
+This project focuses on predicting patient mortality using the MIMIC-III dataset by implementing a complete MLOps pipeline. It includes robust training and inference pipelines, use of synthetic data generation, feature engineering, and model deployment practices. The project uses CI/CD workflows to ensure streamlined and reproducible model lifecycle management.
 
 ---
 
 ## 🚀 Project Overview
 
-The main objective of this project was to build a scalable, cloud-based data pipeline that supports exploratory data analysis, reporting, machine learning model inference, and analytics on raw healthcare data.
+The goal of this project is to build a machine learning model to predict mortality in ICU patients using the MIMIC-III dataset. The project is designed with MLOps best practices in mind and includes:
 
-### ✨ Key Goals:
-- Clean and transform raw datasets from cloud sources
-- Perform exploratory data analysis (EDA) to extract insights
-- Build ETL pipelines using Delta Lake and Medallion Architecture
-- Develop SQL and PySpark queries for business-driven analysis
-- Balance imbalanced datasets using statistical and transformation techniques
-- Implement an ML inference pipeline for predictive analytics
-- Visualize patterns and trends in the data for decision-making
+- 🔧 Training pipeline  
+- 🔍 Inference pipeline  
+- 🔁 Reusable code (Class-based implementation)  
+- ✅ CI/CD workflows using GitHub Actions  
 
 ---
 
-## 🛠️ Tech Stack
+## 📂 Project Structure
 
-- **Programming**: Python, SQL, PySpark  
-- **Cloud Platform**: Microsoft Azure  
-- **Big Data Processing**: Databricks  
-- **Data Storage**: Delta Lake  
-- **Data Architecture**: Medallion Architecture (Bronze → Silver → Gold)  
-- **EDA & Visualization**: Pandas, Matplotlib, Seaborn, SQL  
-- **Machine Learning**: Scikit-learn (model inference & evaluation), Imbalanced-learn (SMOTE, oversampling, undersampling)
+```
+├── training_pipeline/
+│ └── train.py
+├── inference_pipeline/
+│ └── inference.py
+├── cicd/
+│ ├── training.yml
+│ └── inference.yml
+├── artifacts/
+│ ├── model.pkl
+│ ├── scaler.pkl
+│ └── selected_features.pkl
+├── requirements.txt
+└── README.md
 
----
-
-## ✅ Key Contributions
-
-- Ingested and processed raw data using Python and PySpark on Azure
-- Performed Exploratory Data Analysis (EDA) to uncover trends and outliers
-- Built interactive visualizations to support business decisions
-- Implemented Medallion Architecture using Delta Lake (Bronze → Silver → Gold)
-- Developed scalable PySpark and SQL queries for data transformations
-- Applied dataset balancing techniques (SMOTE, undersampling, oversampling) to handle class imbalance
-- Created an **ML inference pipeline** for deploying and testing trained models on new incoming data
+```
 
 ---
 
-## 🙏 Acknowledgements
+## 🏗️ Training Pipeline
 
-Special thanks to:
+The training pipeline includes:
 
-- **Reetayan Das** – for your mentorship and continuous guidance throughout the internship
-- **Chandrashekhar H P** and **Sudheer Kantipudi** – for your constant support and collaboration
+- 📥 Data Ingestion from Azure Blob Storage (26 files, selected relevant ones)  
+- 🧓 Age Column Creation from existing features  
+- 🧹 Preprocessing (cleaning, encoding)  
+- 🧬 Synthetic Data Generation using SDV's TVAE (deep learning-based tabular synthesis)  
+- 🎯 Feature Selection using statistical and model-based techniques  
+- 🤖 Model Training and artifact saving:  
+  - Trained model (`model.pkl`)  
+  - Scaler (`scaler.pkl`)  
+  - Selected features (`selected_features.pkl`)  
 
----
-
-## 📈 Outcome
-
-This project helped solidify my understanding of:
-- Data pipeline development
-- Cloud-based data processing
-- Machine learning inference workflows
-- Dataset balancing techniques for improved model performance
-- Real-world data engineering practices
-
-Looking forward to applying this knowledge in future opportunities!
+These artifacts are saved for reuse during inference—no retraining is required unless explicitly needed.
 
 ---
 
-## 📬 Contact
+## 🔎 Inference Pipeline
 
-If you'd like to connect or know more about my journey, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/naga-sravani-suda-29b4402a1).
+The inference pipeline includes:
+
+- 🧩 Input data handling and preprocessing similar to training  
+- 🔁 Reuse of trained model, scaler, and selected features  
+- 📊 Prediction on unseen data  
+- 🧱 Packaged as a reusable Python class for easy integration into other systems  
 
 ---
 
-> “Transforming raw data into actionable insights is not just a skill — it's an opportunity to empower decisions.”
+## ⚙️ CI/CD Workflows
+
+CI/CD is implemented using GitHub Actions:
+
+- `training.yml`: Automates training pipeline (optional retraining)  
+- `inference.yml`: Validates and tests inference pipeline  
+- `requirements.txt`: Includes all project dependencies for automated builds  
+
+---
+
+## 📦 Dependencies
+
+Install all dependencies with:
+
+```bash
+pip install -r requirements.txt
+```
+## 📈 Results
+
+The trained model is capable of generalizing well to unseen data, thanks to:
+
+- Strong preprocessing pipeline  
+- Synthetic data augmentation using TVAE  
+- Proper feature selection and scaling  
+- Artifact reuse in production  
+
+---
+
+## 🧠 Dataset
+
+The model is trained using a subset of the MIMIC-III clinical dataset.  
+*(Ensure you have proper credentials to access this dataset.)*
+
+---
+
+## 🧰 Technologies Used
+
+- Python  
+- scikit-learn, pandas, numpy  
+- SDV (TVAE) for synthetic data generation  
+- Azure Blob Storage  
+- GitHub Actions for CI/CD  
+- Pickle for artifact serialization  
